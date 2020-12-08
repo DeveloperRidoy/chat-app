@@ -34,8 +34,11 @@ function renderChats() {
 
         //scroll to message form
         ui.messageForm.scrollIntoView();
+
+        //scroll to bottom of the chat window
+        document.querySelector('.chat-window').scrollTop = document.querySelector('.chat-window').scrollHeight;
     })
-}
+} 
 
 
 
