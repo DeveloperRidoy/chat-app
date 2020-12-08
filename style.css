@@ -1,0 +1,30 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.btn{
+    background:#43d9be;
+    color:white;
+}
+
+.animate{
+    animation:animate .5s 1 forwards;
+}
+
+@keyframes animate{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);} 
+}
+
+.alert-message{
+    position:fixed;
+    top:50%;
+    left:50%;
+    animation:animate2 .5s 1 forwards;
+    transform: translate(-50%, -50%);     
+}       
+
+@keyframes animate2{
+    0%{transform:scale(0) translate(-50%, -50%)}
+    100%{transform:scale(1) translate(-50%, -50%)}
+}

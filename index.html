@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Ninja Chat</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- FoneAwesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- own CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+     
+    <!-- container and title -->
+    <div class="container my-4 mx-auto col-md-6">
+        <h1 class="text-center my-4">Ninja Chat</h1>
+
+        <!-- buttons for cahtroom -->
+        <div class="chat-rooms text-center my-3">
+            <div class="mb-2">Choose a chatroom</div>
+            <button class="btn" id="general">#general</button>
+            <button class="btn" id="music">#music</button>
+            <button class="btn" id="gaming">#gaming</button>
+            <button class="btn" id="ninja">#ninja</button>
+        </div>
+
+        <!-- chatlist / window -->
+        <div class="chat-window">
+            <ul class="chat-list list-group"></ul>
+        </div>
+
+        <!-- new chat form -->
+        <form class="new-chat my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">your message</div>
+                </div>
+                <input type="text" name="message" class="form-control">
+                <div class="input-group-append">
+                    <input type="submit" value="send" class="btn">
+                </div>
+            </div>
+        </form>
+
+        <!-- update name form -->
+        <form class="new-name my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Update name</div>
+                </div>
+                <input type="text" name="name" class="form-control">
+                <div class="input-group-append">
+                    <input type="submit" value="update" class="btn">
+                </div>
+            </div>
+        </form>
+
+    </div>
+        
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- date-fns for formatting date in chat -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+    <!-- firebase core -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- cloud firestore -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <!-- initialize firebase and firestore -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAThVk_h8hV5tMoGQ4Sidlu935F_M-OyqM",
+            authDomain: "firest-project-1a389.firebaseapp.com",
+            databaseURL: "https://firest-project-1a389.firebaseio.com",
+            projectId: "firest-project-1a389",
+            storageBucket: "firest-project-1a389.appspot.com",
+            messagingSenderId: "924643838705",
+            appId: "1:924643838705:web:bce8088e5d4721b9f57750",
+            measurementId: "G-P82XXK01GP"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //initialize firestore in db
+        const db = firebase.firestore();
+    </script>
+    <!-- own js -->
+    <script src="store.js"></script>
+    <script src="ui.js"></script>
+    <script src="chat.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
